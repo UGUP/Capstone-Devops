@@ -92,21 +92,21 @@ nodeGroups: # Refer: https://github.com/weaveworks/eksctl/blob/main/examples/05-
     maxSize: 2
     subnets:
       - my-public-201-a
-  - name: pvt-201-a-2
-    labels: { role: workers }
-    tags:
-      k8s.io/cluster-autoscaler/enabled: "true"
-      k8s.io/cluster-autoscaler/my-eks-201: "shared"
-    instancesDistribution:
-      instanceTypes:
-        - t2.medium
-    taints:
-      - key: taint-key
-        value: taint-value
-        effect: NoSchedule
-    desiredCapacity: 1
-    minSize: 1  # just to verify
-    maxSize: 5
-    subnets:
-      - my-private-201-a
-      - my-private-201-b
+  # - name: pvt-201-a-2
+  #   labels: { role: workers }
+  #   tags:
+  #     k8s.io/cluster-autoscaler/enabled: "true"
+  #     k8s.io/cluster-autoscaler/my-eks-201: "shared"
+  #   instancesDistribution:
+  #     instanceTypes:
+  #       - t2.medium
+  #   taints:
+  #     - key: taint-key
+  #       value: taint-value
+  #       effect: NoSchedule
+  #   desiredCapacity: 1
+  #   minSize: 1  # just to verify
+  #   maxSize: 5
+  #   subnets:
+  #     - my-private-201-a
+  #     - my-private-201-b
