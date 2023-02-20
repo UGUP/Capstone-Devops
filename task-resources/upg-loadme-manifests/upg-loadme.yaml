@@ -37,7 +37,7 @@ spec:
       tolerations:
         - key: "capstone.com/app"
           operator: "Equal"
-          value: "true"
+          value: "taint-value"
           effect: "NoSchedule"
 
 ---

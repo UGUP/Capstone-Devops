@@ -102,7 +102,7 @@ nodeGroups: # Refer: https://github.com/weaveworks/eksctl/blob/main/examples/05-
         - t2.medium
     taints:
       - key: capstone.com/app
-        value: true
+        value: taint-value
         effect: NoSchedule
     desiredCapacity: 1
     minSize: 1  # just to verify
