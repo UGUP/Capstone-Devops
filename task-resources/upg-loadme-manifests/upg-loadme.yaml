@@ -34,6 +34,11 @@ spec:
       terminationGracePeriodSeconds: 10
       dnsPolicy: ClusterFirst
       # add tolerations to restrict running on selected nodes
+      tolerations:
+        - key: "taint-key"
+          operator: "Equal"
+          value: "taint-value"
+          effect: "NoSchedule"
 
 ---
 kind: Service
