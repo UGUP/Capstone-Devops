@@ -94,6 +94,7 @@ nodeGroups: # Refer: https://github.com/weaveworks/eksctl/blob/main/examples/05-
       - my-public-201-a
   - name: pvt-201-a-2
     labels: { role: workers }
+    privateNetworking: true
     tags:
       k8s.io/cluster-autoscaler/enabled: "true"
       k8s.io/cluster-autoscaler/my-eks-201: "shared"
