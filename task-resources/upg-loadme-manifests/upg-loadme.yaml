@@ -35,9 +35,9 @@ spec:
       dnsPolicy: ClusterFirst
       # add tolerations to restrict running on selected nodes
       tolerations:
-        - key: "taint-key"
+        - key: "capstone.com/app"
           operator: "Equal"
-          value: "taint-value"
+          value: "true"
           effect: "NoSchedule"
 
 ---
