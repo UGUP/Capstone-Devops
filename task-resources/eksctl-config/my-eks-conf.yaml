@@ -88,7 +88,7 @@ nodeGroups: # Refer: https://github.com/weaveworks/eksctl/blob/main/examples/05-
       instanceTypes:
         - t2.medium
     desiredCapacity: 2
-    minSize: 2
+    minSize: 0
     maxSize: 2
     subnets:
       - my-public-201-a
@@ -102,9 +102,9 @@ nodeGroups: # Refer: https://github.com/weaveworks/eksctl/blob/main/examples/05-
       instanceTypes:
         - t2.medium
     taints:
-      - key: capstone.com/app
+      - key: "capstone.com/app"
         value: "taint-value"
-        effect: NoSchedule
+        effect: "NoSchedule"
     desiredCapacity: 1
     minSize: 1  # just to verify
     maxSize: 5
