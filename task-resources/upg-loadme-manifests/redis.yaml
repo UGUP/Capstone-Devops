@@ -4,8 +4,18 @@ auth:
   ##
   enabled: false
 
+commonConfiguration: |-
+  # Enable AOF https://redis.io/topics/persistence#append-only-file
+  appendonly yes
+  dir /var/lib/redis
+  protected-mode no
+
 master:
   resources:
     limits: 
       cpu: 200m
       memory: 200Mi
+
+persistence:
+  storageClass: "gp2"
+  path: /var/lib/redis
