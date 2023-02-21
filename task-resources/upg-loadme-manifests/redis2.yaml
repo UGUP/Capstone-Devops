@@ -140,9 +140,9 @@ auth:
 ##
 commonConfiguration: |-
   # Enable AOF https://redis.io/topics/persistence#append-only-file
-  dir /var/lib/redis
   appendonly yes
   protected-mode no
+  dir  /var/lib/redis
   # Disable RDB persistence, AOF persistence already enabled.
   save ""
 ## @param existingConfigmap The name of an existing ConfigMap with your custom configuration for Redis&reg; nodes
@@ -425,7 +425,7 @@ master:
     ## @param master.persistence.path The path the volume will be mounted at on Redis&reg; master containers
     ## NOTE: Useful when using different Redis&reg; images
     ##
-    path: /data
+    path: /var/lib/redis
     ## @param master.persistence.subPath The subdirectory of the volume to mount on Redis&reg; master containers
     ## NOTE: Useful in dev environments
     ##
